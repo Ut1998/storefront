@@ -10,4 +10,4 @@ class Storefront(models.Model):
     desc = models.TextField()
     price = models.IntegerField()
     offer = models.BooleanField(default=False)
-    # img = models.ImageField(upload_to="pics")
+    img = models.ImageField(upload_to="pics", default="default.jpg")
