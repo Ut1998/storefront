@@ -30,15 +30,8 @@ def add(request):
 
 # Travello app config from here
 
-
 def index(request):
 
-    store1 = Storefront
-    store1.name = "Pune"
-    store1.desc = "The city with affordable living"
-    store1.price = "20000"
-    store1.img = "bangalore.jpg"
-
-    stores = [store1]
+    stores = Storefront.objects.all()
 
     return render(request, "index.html", {"stores": stores})
